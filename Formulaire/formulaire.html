@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Formulaire</title>
+        <link rel="stylesheet" type="text/css" href="../Formulaire/CSS/style.css">
+    </head>
+
+    <body style="background-color: rgba(218, 215, 215, 0.877);">
+        <form name="Formulaire" id="myForm">
+            <div class="en_tete">
+                <div id="partie_verte"></div>
+                <div id="phrase_entete">
+                    <h1 id="phrase">Veuillez remplir ce formulaire svp!</h1>
+                </div>
+            </div>
+            <div class="presentation">
+
+                <div class="nom" style="float: left; margin-bottom: 100px; margin-left: -400px;">
+                    <h4>Votre nom et prénoms svp</h4>
+                </div>
+                <div id="champTexte" style="float: left; margin-top: 20px; margin-left: -162px;">
+                    <input type="text" id="nameInput" placeholder="Votre réponse" style="border:none;border-bottom: 1px solid gray; outline: none; box-shadow: none;">
+                    <div id="nameInputError" class="error-message" style="margin-top: 10px;"></div>
+                </div>
+                
+            </div>
+            
+            <div class="statut">
+                <div class="phrase_statut" style="float: left; margin-bottom: 100px; margin-left: -400px;">
+                    <h4>Votre statut svp</h4>
+                </div>
+                <div class="champChoix" style="float: left; margin-bottom: -50px; margin-left: -100px; font-size: larger;">
+                    <select id="status" name="status" style="width: 200px; height: 50px;" required>
+                        <option value="choose" selected>Sélectionner:</option>
+                        <option value="company">Une compagnie de voyage</option>
+                        <option value="partner">Un investisseur/Partenaire</option>
+                        <option value="people">Un citoyen</option>
+                </select>
+                </div>
+                
+            </div>
+
+            <div class="adresseMail">
+                <div class="phrase_adresse"  style="float: left; margin-bottom: 100px; margin-left: -400px;">
+                    <h4>Votre adresse mail svp</h4>
+                </div>
+                <div class="champAdresse" style="float: left; margin-bottom: -50px; margin-left: -150px;">
+                    <input type="email" id="emailInput" name="adrMail" placeholder="Votre réponse" style="border:none;border-bottom: 1px solid gray; outline: none; box-shadow: none;"> <br>
+                    <div id="emailInputError" class="error-message" style="margin-top: 10px; color:red;"></div>
+                </div>
+                
+            </div>
+            
+            <div class="telephone">
+                <div class="tel" style="float: left; margin-bottom: 100px; margin-left: -400px;">
+                    <h4>Votre numéro de téléphone svp</h4>
+                </div>
+                <div class="champTel" style="float: left; margin-bottom: -50px; margin-left: -200px;">
+                    <input type="text" id="telephoneInput" name="telephone" placeholder="Votre réponse" style="border:none;border-bottom: 1px solid gray; outline: none; box-shadow: none;"> <br>
+                    <div id="telephoneInputError" class="error-message" style="margin-top: 10px; color:red;"></div>
+                </div>
+            </div>
+            
+            <div class="comment">
+                <div class="phrase_comment" style="float: left; margin-bottom: 100px; margin-left: -450px;">
+                    <h4>Comment avez-vous entendu parler de Easy Travel?</h4>
+                </div>
+                <div class="champRadio" style="float: left; margin-bottom: -50px; margin-left: -330px;font-size: larger;">
+                    <input type="radio" name="choix" value="option1"> Site web<br>
+                    <input type="radio" name="choix" value="option2"> Réseaux sociaux<br>
+                    <input type="radio" name="choix" value="option3"> Annonces/ stands<br>
+                    <input type="radio" name="choix" value="option3"> Autre<br>
+                </div>    
+            </div>
+            <div class="soumission">
+                <div class="envoie" style="margin-right: 383px;">
+                    <input type="submit" value="Envoyer" style="background-color: green; width: 100px; height: 50px; border-radius: 0.25cm; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; font-size:larger; color: white;">
+                </div>
+                <div class="effacement">
+                    <input type="submit" value="Effacer le formulaire"; style="border: 0;box-shadow: none; font-size: larger; text-align: center; color: green;">
+                </div>
+
+                <a href="https://www.google.com/forms/about/?utm_source=product&utm_medium=forms_logo&utm_campaign=forms" id="lien_google" style="margin-top: 150px; margin-left: -400px;"><strong>Google</strong> Forms</a>
+                <p id="texte1" style="margin-top: 70px; margin-left: -400px;">N'envoyez jamais de mots de passe via Google Forms.<br></p>
+                <p id="texte2" style="margin-top: 90px; margin-left: -300px;">
+                    Ce contenu n'est ni rédigé, ni cautionné par Google.
+                    <a href="https://docs.google.com/forms/u/0/d/e/1FAIpQLScXeZZLFdQTRWSq7ce2rHQZFyFcssHYF4-hBcHKcb44m2F89w/reportabuse?source=https://docs.google.com/forms/d/e/1FAIpQLScXeZZLFdQTRWSq7ce2rHQZFyFcssHYF4-hBcHKcb44m2F89w/viewform" target="_blank" id="abus">Signaler un cas d'utilisation abusive</a>-
+                    <a href="https://policies.google.com/terms" target="_blank" id="utilisation">Conditions d'utilisation</a>-
+                </p>
+                <p id="texte3" style="margin-top: 110px; margin-left: -400px;">
+                    <a href="https://policies.google.com/privacy" target="_blank" id="privacy">Règles de confidentialité</a>
+                </p>
+            </div>
+            
+        </form>
+
+        <script>
+            /*var input = document.getElementById("champTexte");
+            var errorMessage = document.getElementById("nameError");
+            input.addEventListener("input", function() {
+              if (!input.value) {
+                errorMessage.textContent = "Veuillez entrer votre nom";
+              } else {
+                errorMessage.textContent = "";
+              }
+            });*/
+            const form = document.querySelector("#myForm");
+            form.addEventListener("submit", function(event) { 
+                const inputFields = document.querySelectorAll("input[type='text'], input[type='email']"); 
+                let isFormValid = true;
+                inputFields.forEach(function(field) {
+                    let errorId = field.id + "Error";
+                    let errorField = document.querySelector("#" + errorId);
+                    if (field.value.trim() == "") {
+                        errorField.innerHTML = "Cette question est obligatoire.";
+                        isFormValid = false;
+                        
+                        
+                    }
+                    else {
+                        errorField.innerHTML = "";
+                    }
+                });
+                if (!isFormValid) {
+                    event.preventDefault();
+                }
+            });
+
+          </script>
+    </body>
+</html>
